@@ -2,7 +2,7 @@ require "spec_helper"
 
 RSpec.describe Nutrientes do
   before :each do
-	@prueba = Cnutrientes.new("Huevo Frito")
+	@prueba = Cnutrientes.new("Huevo Frito", "14.1")
  end
 
   it "has a version number" do
