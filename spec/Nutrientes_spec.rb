@@ -13,6 +13,9 @@ RSpec.describe Nutrientes do
 #    expect(false).to eq(true)
 #  end
 
+ it "Obtener el nombre del alimento" do
+	expect(@prueba.Nombre).to eq("Huevo Frito")
+ end
 
 
 

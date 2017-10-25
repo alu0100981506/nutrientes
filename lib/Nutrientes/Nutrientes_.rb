@@ -1,5 +1,6 @@
 class Cnutrientes
 
+
 def initialize(n, p, g, l)
  
 	@Nombre = n
