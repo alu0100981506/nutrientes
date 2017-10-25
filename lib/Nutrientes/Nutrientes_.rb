@@ -1,6 +1,6 @@
 class Cnutrientes
 
-attr_reader :Nombre, :Proteinas, :Glucidos
+attr_reader :Nombre, :Proteinas, :Glucidos, :Lipidos
 
 def initialize(n, p, g, l)
  
