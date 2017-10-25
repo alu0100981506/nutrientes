@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Pablo Martin Gonzalez"]
   spec.email         = ["alu0100981506@ull.edu.es"]
 
-  spec.summary       = %q{aaaaa}
-  spec.description   = %q{Valores caloricos de alimentos}
+  spec.summary       = %q{Practica sobre calorias}
+  spec.description   = %q{}
   spec.homepage      = "https://github.com/alu0100981506"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
