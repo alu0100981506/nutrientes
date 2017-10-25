@@ -17,4 +17,10 @@ def to_s
 
 end
 
+def val_ener
+
+ 	(@Proteinas.to_f*4.0)+(@Glucidos.to_f*4.0)+(@Lipidos.to_f*9.0)
+
+end
+
 end

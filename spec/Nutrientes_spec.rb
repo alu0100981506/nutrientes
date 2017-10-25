@@ -35,7 +35,7 @@ RSpec.describe Nutrientes do
  end
 
 
- it "Obtener el valor energ´etico de un alimento" do
+ it "Obtener el valor energetico de un alimento" do
 	expect(@prueba.val_ener).to eq(231.9)
  end
 
