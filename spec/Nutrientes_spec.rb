@@ -18,7 +18,9 @@ RSpec.describe Nutrientes do
 	expect(@prueba.Nombre).to eq("Huevo Frito")
  end
 
-
+ it "Obtener la cantidad de proteınas de un alimento" do
+	expect(@prueba.Proteina).to eq("14.1")
+ end
 
 
 
