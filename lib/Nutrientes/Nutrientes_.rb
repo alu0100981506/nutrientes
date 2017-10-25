@@ -1,10 +1,11 @@
 class Cnutrientes
 
-def initialize(n, p, g)
+def initialize(n, p, g, l)
  
 	@Nombre = n
 	@Proteinas = p
 	@Glucidos = g
+	@Lipidos = l
 
 end
 
