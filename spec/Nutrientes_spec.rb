@@ -30,5 +30,9 @@ RSpec.describe Nutrientes do
 	expect(@prueba.Lipidos).to eq("19.5")
  end
 
+ it "Obtener el alimento formateado" do
+	expect(@prueba.to_s).to eq("[Huevo Frito, 14.1, 0.0, 19.5]")
+ end
+
 
 end
