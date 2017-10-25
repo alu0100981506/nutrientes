@@ -22,6 +22,8 @@ RSpec.describe Nutrientes do
 	expect(@prueba.Proteinas).to eq("14.1")
  end
 
-
+ it "Obtener la cantidad Glucidos de un alimento" do
+	expect(@prueba.Glucidos).to eq("0.0")
+ end
 
 end
