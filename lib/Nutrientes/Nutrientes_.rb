@@ -1,5 +1,6 @@
 class Cnutrientes
 
+attr_reader :Nombre
 
 def initialize(n, p, g, l)
  

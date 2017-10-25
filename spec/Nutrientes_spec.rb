@@ -1,5 +1,6 @@
 require "spec_helper"
 
+
 RSpec.describe Nutrientes do
   before :each do
 	@prueba = Cnutrientes.new("Huevo Frito", "14.1", "0.0", "19.5")
