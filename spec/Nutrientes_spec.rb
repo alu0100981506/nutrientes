@@ -19,7 +19,7 @@ RSpec.describe Nutrientes do
  end
 
  it "Obtener la cantidad de proteınas de un alimento" do
-	expect(@prueba.Proteina).to eq("14.1")
+	expect(@prueba.Proteinas).to eq("14.1")
  end
 
 
