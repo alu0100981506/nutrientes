@@ -1,25 +1,25 @@
 class Cnutrientes
 
-attr_reader :Nombre, :Proteinas, :Glucidos, :Lipidos
+attr_reader :nombre, :proteinas, :glucidos, :lipidos
 
  def initialize(n, p, g, l)
  
-	@Nombre = n
-	@Proteinas = p
-	@Glucidos = g
-	@Lipidos = l
+	@nombre = n
+	@proteinas = p
+	@glucidos = g
+	@lipidos = l
 
  end
 
 def to_s
 	
-	"[#{@Nombre}, #{@Proteinas}, #{@Glucidos}, #{@Lipidos}]"
+	"[#{@nombre}, #{@proteinas}, #{@glucidos}, #{@lipidos}]"
 
 end
 
 def val_ener
 
- 	(@Proteinas.to_f*4.0)+(@Glucidos.to_f*4.0)+(@Lipidos.to_f*9.0)
+ 	(@proteinas.to_f*4.0)+(@glucidos.to_f*4.0)+(@lipidos.to_f*9.0)
 
 end
 
