@@ -57,10 +57,16 @@ RSpec.describe Nutrientes do
     end
     
     context "Metodos" do
-        it "Insertar nodo cola" do
+        it "Insertar cola" do
   		  dummy = 2
   		  @ej.insertar_cola(dummy)
   		  expect(@ej.cola.value).to eq(dummy)
+  	  end
+  	  
+  	    it "Insertar head" do
+  	  	dummy = 2
+  	  	@ej.insertar_nodo_head(dummy)
+  	  	expect(@ej.cabeza.value).to eq(dummy)
   	  end
     end
     
