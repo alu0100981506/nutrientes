@@ -37,3 +37,19 @@ RSpec.describe Nutrientes do
  end
 
 end
+
+
+describe Ldd do
+    
+   before :each do  
+        @valor = 1
+        
+        @ej = Ldd.new(@valor)
+    end
+    context "Pruebas de Listas" do
+       it "Debe existir un Nodo de la lista con sus datos, su siguiente y su previo" do
+    end
+    
+    end
+    
+end
