@@ -11,5 +11,10 @@ class Ldd
    end
    
    
-   
+   def insertar_cola(v)
+        aux = Node.new(v,nil,@cola)
+        @cola.next_ = aux
+        @cola = aux
+   end
+    
 end
