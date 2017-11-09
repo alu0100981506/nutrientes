@@ -50,9 +50,9 @@ RSpec.describe Nutrientes do
            expect(@ej).not_to eq(nil)
     end
     it "devuelve la cabeza y cola" do
-  			expect(@en.cabeza).not_to eq(nil)
+  			expect(@ej.cabeza).not_to eq(nil)
   			
-  			expect(@en.cola).not_to eq(nil)
+  			expect(@ej.cola).not_to eq(nil)
   		end
     end
     
