@@ -36,11 +36,10 @@ RSpec.describe Nutrientes do
 	expect(@prueba.val_ener).to eq(231.9)
  end
 
-end
 
 
-describe Ldd do
-    
+
+  describe Ldd do
    before :each do  
         @valor = 1
         
@@ -48,8 +47,16 @@ describe Ldd do
     end
     context "Pruebas de Listas" do
        it "Debe existir un Nodo de la lista con sus datos, su siguiente y su previo" do
+           expect(@ej).not_to eq(nil)
+    end
+    it "devuelve la cabeza y cola" do
+  			expect(@en.cabeza).not_to eq(nil)
+  			
+  			expect(@en.cola).not_to eq(nil)
+  		end
     end
     
-    end
-    
-end
+  end
+  
+  
+  end
