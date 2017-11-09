@@ -65,7 +65,7 @@ RSpec.describe Nutrientes do
   	  
   	    it "Insertar head" do
   	  	dummy = 2
-  	  	@ej.insertar_nodo_head(dummy)
+  	  	@ej.insertar_cabeza(dummy)
   	  	expect(@ej.cabeza.value).to eq(dummy)
   	  end
     end

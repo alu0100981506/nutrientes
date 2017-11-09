@@ -17,4 +17,10 @@ class Ldd
         @cola = aux
    end
     
+    def insertar_cabeza(v)
+        aux = Node.new(v,@cabeza,nil)
+        @cabeza.prev = aux
+        @cabeza = aux
+    end
+    
 end
