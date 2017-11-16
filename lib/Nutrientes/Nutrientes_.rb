@@ -1,6 +1,10 @@
 class Cnutrientes
 
+
+include Comparable
+
 attr_reader :nombre, :proteinas, :glucidos, :lipidos
+
 
  def initialize(n, p, g, l)
  
@@ -21,6 +25,10 @@ def val_ener
 
  	(@proteinas.to_f*4.0)+(@glucidos.to_f*4.0)+(@lipidos.to_f*9.0)
 
+end
+
+def <=>(clase)
+		return self.val_ener <=> clase.val_ener
 end
 
 end
