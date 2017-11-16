@@ -2,6 +2,9 @@
 Node = Struct.new(:value, :next_, :prev)
 
 class Ldd
+
+    include Enumerable
+
     
    attr_reader :cabeza, :cola
    
@@ -46,6 +49,15 @@ class Ldd
        end
        cadena += ")"
        return cadena
+    end
+    
+    
+    def each
+       actual = @cabeza
+       while actual != nil do
+           yield actual.value
+           actual = actual.next_
+       end
     end
     
 end
