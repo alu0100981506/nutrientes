@@ -99,6 +99,21 @@ end
   		  expect(@ej.to_s).to eq("(1 )")
   	  end
   	  
+  	  context "Enumerable" do
+        it "Sumar los elementos" do
+            dummy= 0
+            @ej.insertar_cabeza(dummy)
+            dummy = 1
+            @ej.insertar_cabeza(dummy)
+            dummy = 2
+            @ej.insertar_cabeza(dummy)
+            dummy = 3
+            @ej.insertar_cabeza(dummy)
+            value = 0
+            @ej.each { |k| value += k }
+            expect(value).to eq(7)
+        end
+  	  
     end
     
 
