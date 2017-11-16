@@ -35,7 +35,20 @@ RSpec.describe Nutrientes do
  it "Obtener el valor energetico de un Cnutrientes" do
 	expect(@prueba.val_ener).to eq(231.9)
  end
-
+describe "Comparable" do
+		    it "Menor" do
+		        @prueba1 = Cnutrientes.new("Huevo Frito", "14.1", "0.0", "19.5")
+		        expect(@prueba < @prueba1).to eq(false)
+		    end
+		    it "Mayor" do
+		        @prueba1 = Cnutrientes.new("Huevo Frito", "14.1", "0.0", "19.5")
+		        expect(@prueba > @prueba1).to eq(false)
+		    end
+		    it "Igual" do
+		        @prueba1 = Cnutrientes.new("Huevo Frito", "14.1", "0.0", "19.5")
+		        expect(@prueba == @prueba1).to eq(true)
+		    end
+end
 
 
 
