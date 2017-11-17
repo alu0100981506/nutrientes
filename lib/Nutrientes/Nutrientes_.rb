@@ -1,11 +1,13 @@
+#Clase calculadora de nutrientes
 class Cnutrientes
 
 
 include Comparable
 
+#Getters
 attr_reader :nombre, :proteinas, :glucidos, :lipidos
 
-
+#Inicializacion
  def initialize(n, p, g, l)
  
 	@nombre = n
@@ -14,19 +16,19 @@ attr_reader :nombre, :proteinas, :glucidos, :lipidos
 	@lipidos = l
 
  end
-
+#Metodo para escribir de forma normalizada los nutrientes
 def to_s
 	
 	"[#{@nombre}, #{@proteinas}, #{@glucidos}, #{@lipidos}]"
 
 end
-
+#Metodo para calcular el valor energetico
 def val_ener
 
  	(@proteinas.to_f*4.0)+(@glucidos.to_f*4.0)+(@lipidos.to_f*9.0)
 
 end
-
+#Metodo para hacer comparaciones
 def <=>(clase)
 		return self.val_ener <=> clase.val_ener
 end
