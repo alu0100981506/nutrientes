@@ -33,6 +33,37 @@ def <=>(clase)
 		return self.val_ener <=> clase.val_ener
 end
 
+def calculate_index(data, glucosa)
+		aibc = []
+		aibc_gluc = []
+		data.each do |x|
+			t = 0
+			x.each_index do |a| 
+				if (a  != 0) 
+					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5  
+				end 
+			end 
+			aibc << t
+		end
+		glucosa.each do |x|
+			t = 0
+			x.each_index do |a| 
+				if (a  != 0) 
+					t += (((x[a] - x[0]) + (x[a - 1] - x[0])) /2)*5
+				end 
+			end 
+			aibc_gluc << t
+		end
+		
+		igind = []
+		aibc.each_index { |x|  igind << ((aibc[x] / aibc_gluc[x]) * 100)}
+		
+		suma = 0
+		igind.each{ |x| suma += x}
+		@indexglucosa = (suma / igind.length)
+		
+end
+
 end
 
 
