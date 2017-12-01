@@ -1,5 +1,5 @@
 require "spec_helper"
-
+require "benchmark"
 
 RSpec.describe Nutrientes do
   before :each do
@@ -48,8 +48,7 @@ describe "Comparable" do
 		        @prueba1 = Cnutrientes.new("Huevo Frito", "14.1", "0.0", "19.5")
 		        expect(@prueba == @prueba1).to eq(true)
 		    end
-end
-
+    end     
 describe "Index" do
   		  it "Chocolate" do
   		    @yog = Cnutrientes.new("Chocolate",1,1,1)
@@ -58,7 +57,8 @@ describe "Index" do
   		    index = @yog.calculate_index(datos,glucosa)
   		    expect(index).to eq(13.328114527479904)
   		  end
-enddescribe "Index" do
+end
+describe "Index" do
   		  it "Chocolate" do
   		    @yog = Cnutrientes.new("Chocolate",1,1,1)
   		    datos = [[6.5, 6.5, 6.7, 6.5, 6.5, 6.8, 6.7, 6.2, 6.5, 7.2, 6.9, 7.0, 6.3 ,6.2, 6.1 ,5.9 ,5.8 ,6.1, 6.7, 6.7, 6.6 ,6.7 ,6.9 ,7.2, 7.1],[4.6, 4.6, 4.7, 4.7, 4.8, 4.7, 4.8, 4.8, 4.6, 4.4, 4.7, 4.7, 4.8, 4.7, 5.2, 5.9, 5.9, 5.7, 5.4, 5.3, 5.1, 4.8, 4.8, 4.9, 5.9]]
@@ -351,7 +351,7 @@ end
         array
      end
      
-     def bs_each! (array) #con el each
+     def bs_each! (array) 
         array.each do
           swap_count = 0
           array.each_with_index do |a, index|
@@ -370,6 +370,15 @@ end
       @array = [HuevosLacteosyHelados.new("Huevo frito", "14.1", "0.0", "19.5"), HuevosLacteosyHelados.new("Leche vaca", "3.3", "4.8", "3.2"), HuevosLacteosyHelados.new("Yogurt", "3.8", "4.9", "3.8"), CarnesyDerivados.new("Cerdo", "21.5", "0.0", "6.3"), CarnesyDerivados.new("Ternera", "21.1", "0.0", "3.1"), CarnesyDerivados.new("Pollo", "20.6", "0.0", "5.6"), PescadosyMariscos.new("Bacalao", "17.7", "0.0", "0.4"), PescadosyMariscos.new("Atun", "21.5", "0.0", "15.5"), PescadosyMariscos.new("Salmon", "19.9", "0.0", "13.6"), AlimentosGrasos.new("Aceite de oliva", "0.0","0.2", "99.6"), AlimentosGrasos.new("Mantequilla", "0.7", "0.0", "83.2"), AlimentosGrasos.new("Chocolate", "5.3", "47.0", "30.0"), AlimentosRicosEnCarbohidratos.new("Azucar", "0.0", "99.8", "0.0"), AlimentosRicosEnCarbohidratos.new("Arroz", "6.8", "77.7", "0.6"), AlimentosRicosEnCarbohidratos.new("Lentejas", "23.5", "52.0", "1.4"), AlimentosRicosEnCarbohidratos.new("Papas", "2.0", "15.4", "0.1"), VerdurasyHortalizas.new("Tomate", "1.0", "3.5", "0.2"), VerdurasyHortalizas.new("Cebolla", "1.3", "5.8", "0.3"), VerdurasyHortalizas.new("Calabaza", "1.1", "4.8", "0.1"), Frutas.new("Manzana", "0.3", "12.4", "0.4"), Frutas.new("Platanos", "1.2", "21.4", "0.2"), Frutas.new("Pera", "0.5" ,"12.7", "0.3")]
     end
     
+    it "Benchmark"do
+      Benchmark.bmbm do |x| 
+         
+         x.report("Con el metodo sort\n")  { @array.dup.sort }
+         
+         x.report("Con el metodo for\n") { bs_for!(@array.dup)}
+         x.report("Con el metodo each\n") { bs_each!(@array.dup)}
+      end
+    end
+    
   end
   end
-end
