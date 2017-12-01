@@ -341,6 +341,16 @@ end
     context "Ordenaciones"do
     before :each do
      
+     def bs_for! (array)
+        for i in 0..array.size 
+          for k in i+1..array.size-1    
+            array[i], array[k] = array[k], array[i] if(array[i] > array[k])
+          end
+        end
+        
+        array
+     end
+     
       @array = [HuevosLacteosyHelados.new("Huevo frito", "14.1", "0.0", "19.5"), HuevosLacteosyHelados.new("Leche vaca", "3.3", "4.8", "3.2"), HuevosLacteosyHelados.new("Yogurt", "3.8", "4.9", "3.8"), CarnesyDerivados.new("Cerdo", "21.5", "0.0", "6.3"), CarnesyDerivados.new("Ternera", "21.1", "0.0", "3.1"), CarnesyDerivados.new("Pollo", "20.6", "0.0", "5.6"), PescadosyMariscos.new("Bacalao", "17.7", "0.0", "0.4"), PescadosyMariscos.new("Atun", "21.5", "0.0", "15.5"), PescadosyMariscos.new("Salmon", "19.9", "0.0", "13.6"), AlimentosGrasos.new("Aceite de oliva", "0.0","0.2", "99.6"), AlimentosGrasos.new("Mantequilla", "0.7", "0.0", "83.2"), AlimentosGrasos.new("Chocolate", "5.3", "47.0", "30.0"), AlimentosRicosEnCarbohidratos.new("Azucar", "0.0", "99.8", "0.0"), AlimentosRicosEnCarbohidratos.new("Arroz", "6.8", "77.7", "0.6"), AlimentosRicosEnCarbohidratos.new("Lentejas", "23.5", "52.0", "1.4"), AlimentosRicosEnCarbohidratos.new("Papas", "2.0", "15.4", "0.1"), VerdurasyHortalizas.new("Tomate", "1.0", "3.5", "0.2"), VerdurasyHortalizas.new("Cebolla", "1.3", "5.8", "0.3"), VerdurasyHortalizas.new("Calabaza", "1.1", "4.8", "0.1"), Frutas.new("Manzana", "0.3", "12.4", "0.4"), Frutas.new("Platanos", "1.2", "21.4", "0.2"), Frutas.new("Pera", "0.5" ,"12.7", "0.3")]
     end
     
